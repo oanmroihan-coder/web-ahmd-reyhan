@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedai Kopi H. Slamet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --coklat-gelap: #3E2723;
+            --coklat-sedang: #5D4037;
+            --krem: #EFEBE9;
+            --putih: #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--krem); }
+
+        h1, h2 { font-family: 'Playfair Display', serif; }
+
+        /* HEADER */
+        header {
+            background-color: var(--coklat-gelap);
+            color: var(--putih);
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-size: 1.3rem; font-weight: bold; }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(rgba(62,39,35,0.7), rgba(62,39,35,0.7)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920');
+            background-size: cover;
+            height: 65vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--putih);
+            padding: 20px;
+        }
+        .hero h1 { font-size: 2.8rem; }
+        .hero p { margin: 15px 0 25px; }
+
+        .btn {
+            background-color: var(--coklat-sedang);
+            color: var(--putih);
+            padding: 10px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .btn:hover { background-color: #fff; color: var(--coklat-gelap); }
+
+        /* ALAMAT */
+        .alamat {
+            background-color: var(--putih);
+            padding: 35px 20px;
+            text-align: center;
+            color: var(--coklat-gelap);
+        }
+        .alamat i { font-size: 1.5rem; margin-bottom: 8px; }
+
+        /* MENU */
+        .menu-section { padding: 50px 5%; }
+        .section-title { text-align: center; margin-bottom: 35px; color: var(--coklat-gelap); }
+        .section-title h2 { font-size: 2rem; }
+        .garis { width: 50px; height: 3px; background: var(--coklat-sedang); margin: 10px auto; }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .menu-card {
+            background: var(--putih);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .menu-card:hover { transform: translateY(-5px); }
+
+        .menu-img { width: 100%; height: 160px; object-fit: cover; }
+
+        .menu-info { padding: 15px; text-align: center; }
+        .menu-info h3 { color: var(--coklat-gelap); font-size: 1.1rem; margin-bottom: 5px; }
+        .menu-info p { font-size: 0.85rem; color: #777; margin-bottom: 8px; }
+        .harga { font-weight: 700; color: var(--coklat-sedang); font-size: 1.1rem; }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--coklat-gelap);
+            color: var(--putih);
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .sosmed a {
+            color: var(--putih);
+            font-size: 1.4rem;
+            margin: 0 10px;
+        }
+        .sosmed a:hover { color: var(--krem); }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><i class="fas fa-mug-hot"></i> Kop Slamet</div>
+    </header>
+
+    <section class="hero">
+        <h1>Kedai Kopi H. Slamet</h1>
+        <p>Kopi Enak, Tempat Nyaman, Harga Friendly</p>
+        <a href="#menu" class="btn">Lihat Menu</a>
+    </section>
+
+    <section class="alamat">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Lokasi</h3>
+        <p>Jl. Telaga biru No. 45, Kota Tembilahan hulu</p>
+        <p>Buka: 08.00 - 23.00</p>
+    </section>
+
+    <!-- MENU MINUMAN -->
+    <section id="menu" class="menu-section">
+        <div class="section-title">
+            <h2>Minuman</h2>
+            <div class="garis"></div>
+        </div>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <img src="https://media.suara.com/pictures/653x366/2025/07/15/76268-ilustrasi-es-kopi-susu-gula-aren.jpg" class="menu-img">
+                <div class="menu-info">
+                    <h3>Kopi Susu Gula Aren</h3>
+                    <p>Kopi + Susu + Gula Aren</p>
+                    <div class="harga">Rp 15.000</div>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src=https://tse2.mm.bing.net/th/id/OIP.NjPaI1iXE0-wTk9Cvhg0wwHaE8?pid=Api&P=0&h=180 class="menu-img">
+                <div class="menu-info">
+                    <h3>Kopi Hitam</h3>
+                    <p>Kopi hitam murni</p>
+                    <div class="harga">Rp 12.000</div>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.Ixbt1lkP9NeqeAju_71SSQHaE8?pid=Api&P=0&h=180" class="menu-img">
+                <div class="menu-info">
+                    <h3>Cappuccino</h3>
+                    <p>Espresso + Susu</p>
+                    <div class="harga">Rp 18.000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU MAKANAN -->
+    <section class="menu-section" style="background:#e0d5ce;">
+        <div class="section-title">
+            <h2>Makanan</h2>
+            <div class="garis"></div>
+        </div>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=500" class="menu-img">
+                <div class="menu-info">
+                    <h3>Mie Goreng</h3>
+                    <p>Mie + Telor + Acar</p>
+                    <div class="harga">Rp 18.000</div>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.YRlPGhWICp7Frgb2UzgokAHaE8?pid=Api&P=0&h=180" class="menu-img">
+                <div class="menu-info">
+                    <h3>Nasi Goreng</h3>
+                    <p>Nasi + Telor + Kerupuk</p>
+                    <div class="harga">Rp 20.000</div>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://radarlampung.disway.id/upload/6466b7f452cc25f6fefc25e60ea1f9e8.jpeg" class="menu-img">
+                <div class="menu-info">
+                    <h3>Kentang Goreng</h3>
+                    <p>Kentang + Saos</p>
+                    <div class="harga">Rp 12.000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="sosmed">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>© 2026 Kedai Kopi H. Slamet</p>
+    </footer>
+
+</body>
+</html>
+
